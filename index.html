@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>HALM | ICML 2023 Rebuttal</title>
+</head>
+
+<body>
+
+  <br>
+  <p><span style="font-size: 32px; font-weight: 600">Learning Affinity with Hyperbolic Representation for Spatial Propagation</span></p>
+  <br>
+  <p><span style="font-size: 24px">ICML 2023 Submission Number 947</span><p>
+  <p><span style="font-size: 20px">Rebuttal &ndash; Animated Demos</span><p>
+
+  <section id="contents">
+    <div class="section-title">
+      <h2>Animated Demos</h2>
+    </div>
+    <br>
+    <hr>
+    <span>Contents</span>
+      <ol>
+        <li><a href="#depth_completion">Depth Completion</a></li>
+        <ul>
+          <li><a href="#depth_network">Network Architecture</a></li>
+          <li><a href="#depth_examples">Examples (Image / Sparse Depth / GT Dense Depth)</a></li>
+          <li><a href="#depth_propagation">Spatial Propagation of Depth</a></li>
+          <li><a href="#depth_affinity">Affinity Map</a></li>
+        </ul>
+        <br>
+        <li><a href="#semantic_segmentation">Semantic Segmentation</a></li>
+        <ul>
+          <li><a href="#semantic_network">Network Architecture</a></li>
+          <li><a href="#semantic_examples">Examples (Image / GT Semantic Label)</a></li>
+          <li><a href="#semantic_propagation">Spatial Propagation of Semantic</a></li>
+          <li><a href="#semantic_similarity">Similarity Map</a></li>
+        </ul>
+      </ol>
+    <hr>
+  </section>
+
+
+
+  <section id="depth_completion">
+    <div class="section-title">
+      <h2>Depth Completion</h2>
+    </div>
+
+    <div id="depth_network">
+      <div class="subsection-title">
+        <h4>Network Architecture</h4>
+      </div>
+
+      <div align="center">
+        <img src="/images/depth_network_architecture.png" alt="Image" style='width: 60%'>
+        <br>
+        <p>Depth completion network</p>
+      </div>
+    </div>
+
+    <div id="depth_examples">
+      <div class="subsection-title">
+        <h4>Examples (Image / Sparse Depth / GT Dense Depth)</h4>
+      </div>
+
+      <table align="center" width="100%">
+        <tr>
+          <td>
+            <div align="center">
+              <img src="/images/depth_examples_image.png" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="/images/depth_examples_sparse_depth.png" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="/images/depth_examples_gt_dense_depth.png" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Input image</p>
+          </td>
+          <td>
+            <p>Sparse depth</p>
+          </td>
+          <td>
+            <p>GT dense depth</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="depth_propagation">
+      <div class="subsection-title">
+        <h4>Spatial Propagation of Depth</h4>
+      </div>
+
+      <table align="center" width="100%">
+        <tr>
+          <td>
+            <div align="center">
+              <img src="/images/depth_spatial_propagation_of_depth_1.gif" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="/images/depth_spatial_propagation_of_depth_2.gif" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="/images/depth_spatial_propagation_of_depth_3.gif" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>CSPN</p>
+          </td>
+          <td>
+            <p>Naïve</p>
+          </td>
+          <td>
+            <p><b>HALM(Ours)</b></p>
+          </td>
+        </tr>
+      </table>
+
+      <br>
+      <div align="center">
+        <img src="/images/depth_spatial_propagation_of_depth_4.png" alt="Image" style='width: 100%'>
+        <br>
+        <p>Toy example of spatial propagation</p>
+      </div>
+    </div>
+
+    <div id="depth_affinity">
+      <div class="subsection-title">
+        <h4>Affinity Map</h4>
+      </div>
+
+      <table align="center" width="100%">
+        <tr>
+          <td>
+            <div align="center">
+              <img src="/images/depth_affinity_map_1.png" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="/images/depth_affinity_map_2.png" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="/images/depth_affinity_map_3.png" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>CSPN</p>
+          </td>
+          <td>
+            <p>Naïve</p>
+          </td>
+          <td>
+            <p><b>HALM(Ours)</b></p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+
+
+  <section id="semantic_segmentation">
+    <div class="section-title">
+      <h2>Semantic Segmentation</h2>
+    </div>
+
+    <div id="semantic_network">
+      <div class="subsection-title">
+        <h4>Network Architecture</h4>
+      </div>
+
+      <div align="center">
+        <img src="/images/semantic_network_architecture.png" alt="Image" style='width: 60%'>
+        <br>
+        <p>Semantic segmentation network</p>
+      </div>
+    </div>
+
+    <div id="semantic_examples">
+      <div class="subsection-title">
+        <h4>Examples (Image / GT Semantic Label)</h4>
+      </div>
+
+      <table align="center" width="67%">
+        <tr>
+          <td>
+            <div align="center">
+              <img src="/images/semantic_examples_image.png" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="/images/semantic_examples_gt.png" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Input image</p>
+          </td>
+          <td>
+            <p>GT semantic label</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="semantic_propagation">
+      <div class="subsection-title">
+        <h4>Spatial Propagation of Semantic</h4>
+      </div>
+
+      <table align="center" width="100%">
+        <tr>
+          <td>
+            <div align="center">
+              <img src="/images/semantic_spatial_propagation_of_semantic_1.gif" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="/images/semantic_spatial_propagation_of_semantic_2.gif" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="/images/semantic_spatial_propagation_of_semantic_3.gif" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>DifNet</p>
+          </td>
+          <td>
+            <p>Naïve</p>
+          </td>
+          <td>
+            <p><b>HALM(Ours)</b></p>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="semantic_similarity">
+      <div class="subsection-title">
+        <h4>Similarity Map</h4>
+      </div>
+
+      <table align="center" width="100%">
+        <tr>
+          <td>
+            <div align="center">
+              <img src="/images/semantic_similarity_map_4.gif" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="/images/semantic_similarity_map_5.gif" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="/images/semantic_similarity_map_6.gif" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="/images/semantic_similarity_map_7.gif" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Image</p>
+          </td>
+          <td>
+            <p>DifNet</p>
+          </td>
+          <td>
+            <p>Naïve</p>
+          </td>
+          <td>
+            <p><b>HALM(Ours)</b></p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+</body>
+
+<style type="text/css">
+  body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  p {
+    font-size: 16px;
+    text-align: center;
+    margin: -0.3em -32em 0 -32em;
+  }
+
+  .section-title {
+    padding-top: 50px;
+    text-align: center;
+    margin-bottom: -30px;
+  }
+
+  .subsection-title {
+    text-align: left;
+    padding-top: 30px;
+  }
+</style>
+
+</html>
