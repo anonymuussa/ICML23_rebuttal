@@ -23,6 +23,12 @@
     <hr>
     <span>Contents</span>
       <ol>
+        <li><a href="#hierarchy">Pixel Hierarchy</a></li>
+        <ul>
+          <li><a href="#hierarchy_pixel">Pixel Propagation</a></li>
+          <li><a href="#hierarchy_zoom">Zoomed results</a></li>
+        </ul>
+        <br>
         <li><a href="#depth_completion">Depth Completion</a></li>
         <ul>
           <li><a href="#depth_network">Network Architecture</a></li>
@@ -40,6 +46,109 @@
         </ul>
       </ol>
     <hr>
+  </section>
+
+
+  <section id="hierarchy">
+    <div class="section-title">
+      <h2>Pixel Hierarchy</h2>
+    </div>
+
+    <div id="hierarchy_pixel">
+      <div class="subsection-title">
+        <h4>Pixel Propagation</h4>
+      </div>
+
+      <table align="center" width="100%">
+        <tr>
+          <td>
+            <div align="center">
+              <img src="images/depth_examples_image.png" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="images/hierarchy_pixel_1.gif" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="images/hierarchy_pixel_2.gif" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="images/hierarchy_pixel_3.gif" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Input image</p>
+          </td>
+          <td>
+            <p>CSPN</p>
+          </td>
+          <td>
+            <p>Naïve</p>
+          </td>
+          <td>
+            <p><b>HALM(Ours)</b></p>
+          </td>
+        </tr>
+      </table>
+
+      <br>Example text [1]. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis lorem non enim varius, at finibus lorem rutrum. Cras ullamcorper, nisi ut semper consequat, nisl orci vehicula turpis, ac sollicitudin augue nibh ac risus. Ut dui purus, lacinia vitae libero et, volutpat blandit lorem. Sed nec sagittis nunc. Proin malesuada fringilla felis, vitae condimentum lorem bibendum in. Proin aliquam venenatis est id auctor. Sed et nisi facilisis, maximus metus vitae, placerat quam. Quisque sagittis est sagittis enim consectetur suscipit. Etiam ultrices suscipit sapien sit amet fringilla. Vivamus euismod sapien ac sem pharetra, in faucibus mi posuere. Curabitur mollis, dui sit amet congue venenatis, nisl augue consectetur sem, vel ornare eros metus vitae mauris. Ut suscipit auctor arcu.
+
+    </div>
+
+    <div id="hierarchy_zoom">
+      <div class="subsection-title">
+        <h4>Zoomed results</h4>
+      </div>
+
+      <table align="center" width="100%">
+        <tr>
+          <td>
+            <div align="center">
+              <img src="images/hierarchy_zoom_1.png" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="images/hierarchy_zoom_2.png" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="images/hierarchy_zoom_3.png" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+          <td>
+            <div align="center">
+              <img src="images/hierarchy_zoom_4.png" alt="Image" style='height: 100%; width: 100%'>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Input image</p>
+          </td>
+          <td>
+            <p>CSPN</p>
+          </td>
+          <td>
+            <p>Naïve</p>
+          </td>
+          <td>
+            <p><b>HALM(Ours)</b></p>
+          </td>
+        </tr>
+      </table>
+
+      <br>Example text [2]. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis lorem non enim varius, at finibus lorem rutrum. Cras ullamcorper, nisi ut semper consequat, nisl orci vehicula turpis, ac sollicitudin augue nibh ac risus. Ut dui purus, lacinia vitae libero et, volutpat blandit lorem. Sed nec sagittis nunc. Proin malesuada fringilla felis, vitae condimentum lorem bibendum in. Proin aliquam venenatis est id auctor. Sed et nisi facilisis, maximus metus vitae, placerat quam. Quisque sagittis est sagittis enim consectetur suscipit. Etiam ultrices suscipit sapien sit amet fringilla. Vivamus euismod sapien ac sem pharetra, in faucibus mi posuere. Curabitur mollis, dui sit amet congue venenatis, nisl augue consectetur sem, vel ornare eros metus vitae mauris. Ut suscipit auctor arcu.
+
+    </div>
   </section>
 
 
@@ -96,6 +205,9 @@
           </td>
         </tr>
       </table>
+
+      <br>Example text [3]. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis lorem non enim varius, at finibus lorem rutrum. Cras ullamcorper, nisi ut semper consequat, nisl orci vehicula turpis, ac sollicitudin augue nibh ac risus. Ut dui purus, lacinia vitae libero et, volutpat blandit lorem. Sed nec sagittis nunc. Proin malesuada fringilla felis, vitae condimentum lorem bibendum in. Proin aliquam venenatis est id auctor. Sed et nisi facilisis, maximus metus vitae, placerat quam. Quisque sagittis est sagittis enim consectetur suscipit. Etiam ultrices suscipit sapien sit amet fringilla. Vivamus euismod sapien ac sem pharetra, in faucibus mi posuere. Curabitur mollis, dui sit amet congue venenatis, nisl augue consectetur sem, vel ornare eros metus vitae mauris. Ut suscipit auctor arcu.
+
     </div>
 
     <div id="depth_propagation">
@@ -140,6 +252,9 @@
         <br>
         <p>Toy example of spatial propagation</p>
       </div>
+
+      <br>Example text [4]. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis lorem non enim varius, at finibus lorem rutrum. Cras ullamcorper, nisi ut semper consequat, nisl orci vehicula turpis, ac sollicitudin augue nibh ac risus. Ut dui purus, lacinia vitae libero et, volutpat blandit lorem. Sed nec sagittis nunc. Proin malesuada fringilla felis, vitae condimentum lorem bibendum in. Proin aliquam venenatis est id auctor. Sed et nisi facilisis, maximus metus vitae, placerat quam. Quisque sagittis est sagittis enim consectetur suscipit. Etiam ultrices suscipit sapien sit amet fringilla. Vivamus euismod sapien ac sem pharetra, in faucibus mi posuere. Curabitur mollis, dui sit amet congue venenatis, nisl augue consectetur sem, vel ornare eros metus vitae mauris. Ut suscipit auctor arcu.
+
     </div>
 
     <div id="depth_affinity">
@@ -177,6 +292,9 @@
           </td>
         </tr>
       </table>
+
+      <br>Example text [5]. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis lorem non enim varius, at finibus lorem rutrum. Cras ullamcorper, nisi ut semper consequat, nisl orci vehicula turpis, ac sollicitudin augue nibh ac risus. Ut dui purus, lacinia vitae libero et, volutpat blandit lorem. Sed nec sagittis nunc. Proin malesuada fringilla felis, vitae condimentum lorem bibendum in. Proin aliquam venenatis est id auctor. Sed et nisi facilisis, maximus metus vitae, placerat quam. Quisque sagittis est sagittis enim consectetur suscipit. Etiam ultrices suscipit sapien sit amet fringilla. Vivamus euismod sapien ac sem pharetra, in faucibus mi posuere. Curabitur mollis, dui sit amet congue venenatis, nisl augue consectetur sem, vel ornare eros metus vitae mauris. Ut suscipit auctor arcu.
+
     </div>
   </section>
 
@@ -226,6 +344,9 @@
           </td>
         </tr>
       </table>
+
+      <br>Example text [6]. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis lorem non enim varius, at finibus lorem rutrum. Cras ullamcorper, nisi ut semper consequat, nisl orci vehicula turpis, ac sollicitudin augue nibh ac risus. Ut dui purus, lacinia vitae libero et, volutpat blandit lorem. Sed nec sagittis nunc. Proin malesuada fringilla felis, vitae condimentum lorem bibendum in. Proin aliquam venenatis est id auctor. Sed et nisi facilisis, maximus metus vitae, placerat quam. Quisque sagittis est sagittis enim consectetur suscipit. Etiam ultrices suscipit sapien sit amet fringilla. Vivamus euismod sapien ac sem pharetra, in faucibus mi posuere. Curabitur mollis, dui sit amet congue venenatis, nisl augue consectetur sem, vel ornare eros metus vitae mauris. Ut suscipit auctor arcu.
+
     </div>
 
     <div id="semantic_propagation">
@@ -263,6 +384,9 @@
           </td>
         </tr>
       </table>
+
+      <br>Example text [7]. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis lorem non enim varius, at finibus lorem rutrum. Cras ullamcorper, nisi ut semper consequat, nisl orci vehicula turpis, ac sollicitudin augue nibh ac risus. Ut dui purus, lacinia vitae libero et, volutpat blandit lorem. Sed nec sagittis nunc. Proin malesuada fringilla felis, vitae condimentum lorem bibendum in. Proin aliquam venenatis est id auctor. Sed et nisi facilisis, maximus metus vitae, placerat quam. Quisque sagittis est sagittis enim consectetur suscipit. Etiam ultrices suscipit sapien sit amet fringilla. Vivamus euismod sapien ac sem pharetra, in faucibus mi posuere. Curabitur mollis, dui sit amet congue venenatis, nisl augue consectetur sem, vel ornare eros metus vitae mauris. Ut suscipit auctor arcu.
+
     </div>
 
     <div id="semantic_similarity">
@@ -308,6 +432,9 @@
           </td>
         </tr>
       </table>
+
+      <br>Example text [8]. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis lorem non enim varius, at finibus lorem rutrum. Cras ullamcorper, nisi ut semper consequat, nisl orci vehicula turpis, ac sollicitudin augue nibh ac risus. Ut dui purus, lacinia vitae libero et, volutpat blandit lorem. Sed nec sagittis nunc. Proin malesuada fringilla felis, vitae condimentum lorem bibendum in. Proin aliquam venenatis est id auctor. Sed et nisi facilisis, maximus metus vitae, placerat quam. Quisque sagittis est sagittis enim consectetur suscipit. Etiam ultrices suscipit sapien sit amet fringilla. Vivamus euismod sapien ac sem pharetra, in faucibus mi posuere. Curabitur mollis, dui sit amet congue venenatis, nisl augue consectetur sem, vel ornare eros metus vitae mauris. Ut suscipit auctor arcu.
+
     </div>
   </section>
 
